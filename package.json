@@ -1,0 +1,27 @@
+{
+  "name": "babel_webpack_config",
+  "version": "1.0.0",
+  "description": "Starter pack for compiling ES6+ apps to ES5 + an app buold for testing purposes called nanoPosts.",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack",
+    "json:server": "json-server --watch api/db.json",
+    "start": "webpack-dev-server --output-public-path=/build/",
+    "dev": "concurrently \"npm run json:server\" \"npm run start\""
+  },
+  "author": "BiggaHD",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "json-server": "^0.12.1"
+  }
+}
